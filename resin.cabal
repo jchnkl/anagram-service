@@ -16,7 +16,7 @@ build-type:          Simple
 cabal-version:       >=1.10
 
 executable anagramService
-  main-is:             Main.hs
+  main-is:             Anagram/Main.hs
   -- other-modules:       
   -- other-extensions:    
 

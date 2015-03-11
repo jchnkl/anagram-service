@@ -1,12 +1,12 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module AnagramService (service) where
+module Anagram.Service (service) where
 
 import Web.Scotty
 import Control.Applicative
-import AnagramConfig
-import AnagramTypes
-import AnagramSolver
+import Anagram.Config
+import Anagram.Types
+import Anagram.Solver
 import Network.Wai.Handler.Warp (Port)
 
 service :: Port -> IO ()

@@ -1,4 +1,4 @@
-module AnagramConfig where
+module Anagram.Config where
 
 import Network.Wai.Handler.Warp (Port)
 

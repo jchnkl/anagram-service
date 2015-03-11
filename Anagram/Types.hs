@@ -1,6 +1,6 @@
 {-# LANGUAGE TemplateHaskell #-}
 
-module AnagramTypes
+module Anagram.Types
     ( Error(..)
     ) where
 

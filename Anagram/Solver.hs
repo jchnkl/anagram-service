@@ -1,6 +1,6 @@
 {-# LANGUAGE CPP #-}
 
-module AnagramSolver
+module Anagram.Solver
     ( Key
     , Word
     , AnagramTable
@@ -13,7 +13,7 @@ module AnagramSolver
 
 #ifdef GHC_INTERACTIVE_STANDALONE
 import Control.Monad ((<=<), join, forever)
-import AnagramConfig (defaultDictionary)
+import Anagram.Config (defaultDictionary)
 #endif
 
 import Data.HashMap.Lazy (HashMap)
