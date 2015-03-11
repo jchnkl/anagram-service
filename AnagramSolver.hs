@@ -13,6 +13,7 @@ module AnagramSolver
 
 #ifdef GHC_INTERACTIVE_STANDALONE
 import Control.Monad ((<=<), join, forever)
+import AnagramConfig (defaultDictionary)
 #endif
 
 import Data.HashMap.Lazy (HashMap)
@@ -40,11 +41,8 @@ findAnagrams w = L.filter (/= w) . fromMaybe [] . H.lookup (toKey w)
 showWords :: [Word] -> String
 showWords = ("=> " ++) . join . L.intersperse ", "
 
-dictFile :: FilePath
-dictFile = "/usr/share/dict/cracklib-small"
-
 main :: IO ()
-main = forever . solver . buildTable <=< fmap words $ readFile dictFile
+main = forever . solver . buildTable <=< fmap words $ readFile defaultDictionary
     where solver m = fmap (flip findAnagrams m) getLine >>= putStrLn . showWords
 
 -- GHC_INTERACTIVE_STANDALONE
