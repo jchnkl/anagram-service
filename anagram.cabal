@@ -24,6 +24,7 @@ executable anagramService
                        unordered-containers >= 0.2.5,
                        dlist >= 0.7,
                        text >= 1.2,
+                       wai-cors >= 0.2,
                        warp >= 3.0,
                        scotty >= 0.9,
                        aeson >= 0.8
