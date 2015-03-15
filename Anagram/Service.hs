@@ -2,14 +2,14 @@
 
 module Anagram.Service (service) where
 
-import Web.Scotty
-import Data.Text.Lazy (unpack)
-import Control.Applicative
 import Anagram.Config
-import Anagram.Types
 import Anagram.Solver
-import Network.Wai.Middleware.Cors
+import Anagram.Types
+import Control.Applicative
+import Data.Text.Lazy (unpack)
 import Network.Wai.Handler.Warp (Port)
+import Network.Wai.Middleware.Cors
+import Web.Scotty
 
 service :: Port -> IO ()
 service p = buildTable . words <$> readFile defaultDictionary >>= runScotty p
