@@ -18,7 +18,7 @@ source-repository head
   location: git://github.com/jotrk/anagram-service.git
 
 executable anagram-service
-  main-is:           Anagram/Main.hs
+  main-is:           Main.hs
 
   build-depends:     base           >= 4.7  && < 4.8,
                      anagram-solver >= 0.1  && < 0.2,
